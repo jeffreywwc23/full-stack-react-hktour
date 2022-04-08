@@ -2,19 +2,19 @@
 
 This project is using
 
-//Front End
+//Front End -
 HTML
 CSS
 Javascript
 React.js
 Redux
 
-//Back End
+//Back End -
 Node.js
 Express.js
 
-//Database
+//Database -
 MongoDB
 
-//Payment Gateway
+//Payment Gateway -
 Stripe
