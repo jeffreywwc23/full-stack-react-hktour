@@ -1,0 +1,25 @@
+.scroll-to-top {
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: black;
+  position: relative;
+  border-radius: 50%;
+  z-index: 1;
+  padding: 0 5px;
+  margin: 20px 20px;
+  animation: scrollTop 0.5s alternate ease infinite;
+}
+
+.arrow {
+  font-size: 18px;
+  color: #66a6ff;
+}
+
+@keyframes scrollTop {
+  from {
+    transform: translateY(15px);
+  }
+  to {
+    transform: translateY(-1px);
+  }
+}

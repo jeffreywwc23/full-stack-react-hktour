@@ -1,0 +1,29 @@
+.overview-main {
+  background-image: linear-gradient(
+    to bottom,
+    #b0d6f9,
+    #d2e2fc,
+    #edeffd,
+    var(--mainWhite)
+  );
+  padding: 8rem 6rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+}
+
+.overview-title {
+  color: var(--mainBlack);
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.card-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 7rem;
+}

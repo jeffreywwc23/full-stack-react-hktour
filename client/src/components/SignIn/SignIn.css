@@ -1,0 +1,18 @@
+.sign-wrapper .login-container .form-container {
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+}
+
+.sign-wrapper.active .login-container .form-container {
+  -webkit-transform: translateX(1280px);
+  transform: translateX(1280px);
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+}
+
+.forgot-password a {
+  text-decoration: none;
+  color: inherit;
+}

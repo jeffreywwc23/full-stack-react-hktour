@@ -1,0 +1,258 @@
+.box-wrapper {
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  margin-bottom: 80px;
+}
+
+.box-container {
+  position: relative;
+  width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  font-family: "Poppins", sans-serif;
+}
+
+.box-container .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.box-container .card:nth-child(even) {
+  flex-direction: column-reverse;
+}
+
+.box-container .card .imgBox {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.box-container .card .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s;
+}
+
+.box-container .card .imgBox:hover img {
+  transform: scale(1.4);
+}
+
+.box-container .content {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-container .content span {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  white-space: nowrap;
+}
+
+.box-container .content span:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 6px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: #b8f3ff;
+}
+
+.color-text {
+  text-transform: uppercase;
+  background: linear-gradient(to right, #00f260, #f79d00, #0575e6, #64f38c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  background-size: 300%;
+  background-position: -100%;
+
+  animation: animatedText 5s infinite alternate-reverse;
+}
+
+@keyframes animatedText {
+  to {
+    background-position: 100%;
+  }
+}
+
+.box-container .content p {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+}
+
+.box-container .card div {
+  padding: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1400px) {
+  .box-wrapper {
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  .box-container {
+    width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .box-container .card .imgBox {
+    width: 250px;
+    height: 250px;
+  }
+
+  .box-container .content {
+    width: 250px;
+    height: 250px;
+  }
+
+  .box-container .content span {
+    font-size: 27px;
+  }
+
+  .box-container .content p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .box-container {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    margin: 50px;
+  }
+
+  .box-container .card {
+    flex-direction: row;
+    margin: 10px 0;
+  }
+
+  .box-container .card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .box-container .card .imgBox,
+  .box-container .card .content {
+    width: 50%;
+  }
+
+  .box-container .content span {
+    font-size: 45px;
+  }
+
+  .box-container .content p {
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .box-container {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    margin: 50px;
+  }
+
+  .box-container .card {
+    flex-direction: row;
+    margin: 10px 0;
+  }
+
+  .box-container .card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .box-container .card .imgBox,
+  .box-container .card .content {
+    width: 50%;
+  }
+
+  .box-container .content span {
+    font-size: 29px;
+  }
+
+  .box-container .content p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .box-container .card {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .box-container .card:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .box-container .card .imgBox,
+  .box-container .card .content {
+    width: 100%;
+  }
+
+  .box-container .card .content {
+    height: 200px;
+  }
+
+  .box-container .content span {
+    font-size: 32px;
+  }
+
+  .box-container .content p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .box-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .box-container .card {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .box-container .card:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .box-container .card .imgBox,
+  .box-container .card .content {
+    width: 100%;
+  }
+
+  .box-container .card .content {
+    height: 200px;
+  }
+
+  .box-container .content span {
+    font-size: 27px;
+  }
+
+  .box-container .content p {
+    font-size: 12px;
+  }
+}

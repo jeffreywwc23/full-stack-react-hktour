@@ -1,0 +1,67 @@
+.error-container {
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--blue1),
+    var(--blue2)
+  );
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.error-container h1 {
+  font-size: 100px;
+  margin: 0 0 0.5em;
+  line-height: 10px;
+  z-index: 10;
+}
+
+.error-container p {
+  font-size: 25px;
+  line-height: 26px;
+  z-index: 10;
+}
+
+.error-container small {
+  font-size: 25px;
+  opacity: 0.7;
+  z-index: 10;
+}
+
+.error-container a {
+  color: #eee;
+}
+
+.error-container .circle {
+  background-image: linear-gradient(to top right, var(--blue1), var(--blue2));
+  border-radius: 50%;
+  position: absolute;
+}
+
+.error-container .circle.small {
+  top: 200px;
+  left: 150px;
+  width: 100px;
+  height: 100px;
+}
+
+.error-container .circle.medium {
+  background-image: linear-gradient(to bottom left, var(--blue1), var(--blue2));
+  bottom: -70px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+}
+
+.error-container .circle.big {
+  top: 120px;
+  right: 10px;
+  width: 300px;
+  height: 300px;
+}

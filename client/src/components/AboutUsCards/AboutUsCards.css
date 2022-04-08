@@ -1,0 +1,132 @@
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 200px;
+  z-index: -1;
+}
+
+.banner:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.banner video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Text */
+.banner .textBox {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  max-width: 450px;
+  z-index: 2;
+  margin-left: 20px;
+  color: black;
+}
+
+.banner .textBox h1 {
+  line-height: 400%;
+  font-size: 3.5rem;
+}
+
+.info__spacer {
+  display: inline-block;
+  height: 1px;
+  width: 200px;
+  background-color: black;
+  margin-bottom: 35px;
+}
+
+.banner .textBox p {
+  color: black;
+  font-size: 1.7rem;
+  line-height: 200%;
+  margin: 5px 0 25px;
+  font-weight: 500;
+}
+
+.banner .videoBox {
+  position: relative;
+  margin-left: 40px;
+  width: 100%;
+  height: 400px;
+  z-index: 1;
+}
+
+.banner .videoBox video {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1090px) {
+  .banner {
+    padding: 70px 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 80px;
+  }
+
+  .banner:before {
+    display: none;
+  }
+
+  .banner .textBox {
+    max-width: 100%;
+  }
+
+  .banner .textBox h2 {
+    font-size: 2.5em;
+  }
+
+  .banner .videoBox {
+    width: 100%;
+    height: 300px;
+    margin: 40px 0 100px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .banner {
+    padding: 70px 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 80px;
+  }
+
+  .banner:before {
+    display: none;
+  }
+
+  .banner .textBox {
+    max-width: 100%;
+  }
+
+  .banner .textBox h2 {
+    font-size: 2.5em;
+  }
+
+  .banner .videoBox {
+    width: 100%;
+    height: 300px;
+    margin: 40px 0 100px;
+    padding: 0 50px;
+  }
+}

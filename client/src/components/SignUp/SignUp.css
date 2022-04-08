@@ -1,0 +1,28 @@
+.sign-wrapper .sign-up-container {
+  pointer-events: none;
+}
+
+.sign-wrapper.active .sign-up-container {
+  pointer-events: initial;
+}
+
+.sign-wrapper .sign-up-container .form-container {
+  -webkit-transform: translateX(-960px);
+  transform: translateX(-960px);
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+}
+
+.sign-wrapper.active .sign-up-container .form-container {
+  -webkit-transform: translateX(320px);
+  transform: translateX(320px);
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+}
+
+@media only screen and (max-width: 991px) {
+  .sign-wrapper.active .sign-up-container .form-container {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}

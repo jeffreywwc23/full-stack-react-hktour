@@ -1,0 +1,109 @@
+/* Navbar */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+/* Hero */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+/* Footer */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+:root {
+  --section-rotate: 9vw;
+  --blue1: #6dd5fa;
+  --blue2: #1888ff;
+  --blue3: #4499dd;
+  --blue4: #a1c4fd;
+  --blue5: #66a6ff;
+  --mainWhite: #fff;
+  --mainBlack: #000000;
+  --mainGrey: #bbb;
+  --grey2: #777;
+}
+
+::-moz-selection {
+  background-color: var(--blue1);
+  color: var(--mainWhite);
+}
+
+::selection {
+  background-color: var(--blue1);
+  color: var(--mainWhite);
+}
+
+/* entire scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+
+/* tracking area */
+::-webkit-scrollbar-track {
+  background: var(--mainWhite);
+}
+
+/* scroll thumb */
+::-webkit-scrollbar-thumb {
+  background-color: var(--mainBlack);
+  border-radius: 20px;
+  border: 1px solid var(--blue1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 55%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  color: var(--grey2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.pages-container {
+  padding-top: 80px;
+}
+
+/* page transition */
+.page {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+}
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear 150ms, transform 300ms ease-out 150ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 150ms linear, transform 150ms ease-in;
+}

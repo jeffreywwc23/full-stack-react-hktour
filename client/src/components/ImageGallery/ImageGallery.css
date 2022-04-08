@@ -1,0 +1,139 @@
+.image-gallery-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 150px 0 250px 0;
+  color: #fff;
+}
+
+figure.image-figure {
+  position: relative;
+  overflow: hidden;
+  margin: 0 10px;
+  min-width: 230px;
+  max-width: 30%;
+  max-height: 300px;
+  width: 100%;
+  background: #000000;
+  text-align: left;
+}
+
+figure.image-figure * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+figure.image-figure img {
+  opacity: 0.65;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+figure.image-figure figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+figure.image-figure figcaption > div {
+  height: 50%;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+figure.image-figure h2,
+figure.image-figure h3 {
+  margin: 0;
+  position: absolute;
+  left: 0;
+  padding: 0 30px;
+  text-transform: uppercase;
+}
+
+figure.image-figure h2 {
+  font-size: 20px;
+  bottom: 0;
+  font-weight: 900;
+}
+
+figure.image-figure h3 {
+  font-size: 13px;
+  top: 0;
+  font-weight: 500;
+}
+
+figure.image-figure h3:nth-of-type(2) {
+  opacity: 0;
+  -webkit-transform: translateY(-150%);
+  transform: translateY(-150%);
+}
+
+figure.image-figure a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+figure.image-figure:hover img,
+figure.image-figure.hover img {
+  opacity: 0.3;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+figure.image-figure:hover figcaption h3:first-of-type,
+figure.image-figure.hover figcaption h3:first-of-type {
+  -webkit-transform: translateY(-150%);
+  transform: translateY(-150%);
+  opacity: 0;
+}
+
+figure.image-figure:hover figcaption h3:nth-of-type(2),
+figure.image-figure.hover figcaption h3:nth-of-type(2) {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+@media screen and (max-width: 1280px) {
+  .image-gallery-container {
+    margin: 100px 0;
+  }
+
+  figure.image-figure {
+    min-width: 120px;
+  }
+}
+
+@media screen and (max-width: 756px) {
+  .image-gallery-container {
+    flex-direction: column;
+    margin: 100px 0;
+  }
+
+  figure.image-figure {
+    min-width: 300px;
+    width: 100%;
+    max-width: 80%;
+    max-height: 300px;
+    margin: 10px 0;
+  }
+
+  figure.image-figure img {
+    width: 100%;
+    height: 320px;
+  }
+}

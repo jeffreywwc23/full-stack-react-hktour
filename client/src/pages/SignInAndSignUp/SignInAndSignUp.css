@@ -1,0 +1,350 @@
+.sign-container {
+  width: 100%;
+  /* height: 100%; */
+  height: 100vh;
+  /* max-height: 100vh; */
+  /* padding: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(circle, #ffffff, #edeffd, #d2e2fc, #b0d6f9);
+}
+
+.testing {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-wrapper {
+  width: 800px;
+  height: 500px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.5);
+}
+
+.sign-wrapper .sign-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.sub-container {
+  overflow: hidden;
+  position: absolute;
+  left: 60%;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  padding-left: 260px;
+  background: #fff;
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  z-index: 9999;
+}
+
+.sign-form button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.sign-form button {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 36px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.sign-form .submit {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: #b0d6f9;
+  color: black;
+  transition: all 0.5s ease-in-out;
+}
+
+.sign-form .submit:hover {
+  color: #fff;
+  background: black;
+}
+
+.sub-container .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 360px;
+}
+
+.sub-container .image:before {
+  width: 960px;
+  height: 100%;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url("https://images.pexels.com/photos/597909/pexels-photo-597909.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-size: cover;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+.sub-container .image:after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.image-text {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+}
+
+.image-text h2 {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.image-text p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.image-btn {
+  width: 100px;
+  height: 36px;
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  margin: 0 auto;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.image-btn:after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.image-btn span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: -webkit-transform 1.2s;
+  transition: transform 1.2s;
+}
+
+.sign-wrapper .sign-form .form-container {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: 500ms;
+}
+
+.sign-wrapper .sign-form .form-container form h2 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.sign-wrapper .sign-form .form-container form input {
+  position: relative;
+  width: 100%;
+  padding: 12px;
+  background: #f5f5f5;
+  color: #333;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 8px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  border-radius: 7px;
+}
+
+.forgot-password {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0c0101;
+  cursor: pointer;
+  width: 180px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.panel-switcher {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0c0101;
+  cursor: pointer;
+  width: 200px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.forgot-password:hover,
+.panel-switcher:hover {
+  color: red;
+}
+
+.sign-social-media-icons {
+  width: 100%;
+  text-align: center;
+  margin: 20px auto;
+  display: flex;
+  font-size: 35px;
+  color: #000000;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* animation */
+.sign-wrapper.active .sub-container {
+  -webkit-transform: translateX(-480px);
+  transform: translateX(-480px);
+}
+
+.sign-wrapper.active .image:before {
+  -webkit-transform: translateX(640px);
+  transform: translateX(640px);
+}
+
+.sign-wrapper .image-text.image-text-in {
+  -webkit-transform: translateX(520px);
+  transform: translateX(520px);
+}
+
+.sign-wrapper.active .image-text.image-text-in {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.sign-wrapper.active .image-text.image-text-up {
+  -webkit-transform: translateX(-520px);
+  transform: translateX(-520px);
+}
+
+.sign-wrapper .image-btn span.image-text-in {
+  -webkit-transform: translateY(-72px);
+  transform: translateY(-72px);
+}
+
+.sign-wrapper.active .image-btn span.image-text-in {
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.sign-wrapper.active .image-btn span.image-text-up {
+  -webkit-transform: translateY(-72px);
+  transform: translateY(-72px);
+}
+
+@media only screen and (max-width: 991px) {
+  .sign-wrapper {
+    max-width: 600px;
+  }
+
+  .sign-wrapper .sign-form .form-container {
+    width: 100%;
+  }
+
+  .sub-container .image {
+    display: none;
+  }
+
+  .sub-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .sign-container {
+    padding: 0;
+  }
+
+  .sign-wrapper {
+    max-width: 400px;
+  }
+
+  .sign-wrapper .sign-form .form-container {
+    width: 100%;
+  }
+
+  .sub-container .image {
+    display: none;
+  }
+
+  .sub-container {
+    display: none;
+  }
+
+  .sign-wrapper .sign-form .form-container form input {
+    width: 200px;
+    display: block;
+    margin: 8px auto;
+  }
+}
