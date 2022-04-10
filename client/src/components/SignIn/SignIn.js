@@ -10,7 +10,7 @@ import { setUser } from "../../redux/reducers/userReducer";
 import { GoogleLogin } from "react-google-login";
 // import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 
-export const SignIn = ({ login, googleLogin, facebookLogin, handleClick }) => {
+export const SignIn = ({ handleClick }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.user?.userState);
@@ -63,18 +63,44 @@ export const SignIn = ({ login, googleLogin, facebookLogin, handleClick }) => {
     }
   };
 
-  const responseGoogle = (response) => {
-    const email = response.profileObj;
-    const GoogleAccessToken = response.accessToken;
-    googleLogin(email, GoogleAccessToken, navigate);
+  const responseGoogle = async (response) => {
+    try {
+      const email = response.profileObj;
+      const GoogleAccessToken = response.accessToken;
+
+      // const Origin = window.location.origin;
+      const res = await axios.post(
+        `http://localhost:3000/api/v1/users/google-login`,
+        email,
+        {
+          GoogleAccessToken,
+        }
+      );
+      const { data } = res;
+
+      dispatch(
+        setUser({
+          ...user,
+          userInfo: [data],
+        })
+      );
+
+      toast.success("Google Sign In Successfully!");
+      navigate(`/`);
+    } catch (error) {
+      console.log("error = ", error);
+      if (error.response) {
+        toast.error("Google Sign In Fail!");
+      }
+    }
   };
 
-  const responseFacebook = (response) => {
-    console.log(response);
-    const emailFromFacebook = response.email;
-    const FbAccessToken = response.accessToken;
-    facebookLogin(emailFromFacebook, FbAccessToken, navigate);
-  };
+  // const responseFacebook = (response) => {
+  //   console.log(response);
+  //   const emailFromFacebook = response.email;
+  //   const FbAccessToken = response.accessToken;
+  //   facebookLogin(emailFromFacebook, FbAccessToken, navigate);
+  // };
 
   return (
     <div className="sign-form login-container">
